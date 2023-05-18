@@ -26,7 +26,9 @@ const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
 
 mongoose.connect(URI).then(() => console.log('connect to db'));
 
-app.get('/', (req, res) => res.send('<h1>hello world from dev asdas<h1>'));
+app.get('/', (req, res) =>
+  res.send('<h1>hello world from aws , using docker hub <h1>')
+);
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`App running on port ${port}...`);
